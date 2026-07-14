@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: wheat;
+}
+.counter{
+  background: #000;
+  color: wheat;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+font-size: 50px;
+
+  
+
+}
+
+.Display{
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: 50px;
+
+}
+
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+    padding: 10px 20px;
+  
+  
+}
+
+
+.btn{
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: wheat;
+  color: black;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 1000;
+  font-size: xx-large;
+}
