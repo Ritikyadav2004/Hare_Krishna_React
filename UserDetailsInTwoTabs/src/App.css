@@ -1,0 +1,38 @@
+.btns{
+  display: flex;
+  justify-content: center;
+   
+  gap: 25px;
+  
+  
+}
+
+
+.btn{
+  height: 50px;
+  width: 200px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  font-weight: 800;
+  border: 2px solid black;
+}
+
+
+.btn:hover{
+  background-color: gray;
+  color:white;
+  cursor: pointer;
+}
+
+
+
+.preview{
+  margin: 20px 0px 0px 0px;
+
+}
+
+
+.form{
+  background-color: beige;
+  display: flex;
+}

@@ -1,5 +1,5 @@
 import './App.css'
-import Card from './components/Card'
+import Card from './components/Card.jsx'
 function App() {
   let myObj={
     name:"Ritik Code and Fun",
