@@ -59,10 +59,15 @@ window.navigator.clipboard.writeText(password);
           />
 
           <button 
-          onClick={copyPasswordToClipboard}
-          className='whitespace-nowrap bg-cyan-500 px-4 font-medium text-slate-950 transition hover:bg-cyan-400'>
-            Copy
-          </button>
+  onClick={copyPasswordToClipboard}
+  className="whitespace-nowrap bg-cyan-500 px-4 py-2 font-medium text-slate-950 
+             transition hover:bg-cyan-400 active:scale-95 active:bg-cyan-600 
+             cursor-pointer rounded"
+>
+  Copy
+</button>
+
+
         </div>
 
         <div className='space-y-4 rounded-xl bg-slate-900/50 p-4'>
