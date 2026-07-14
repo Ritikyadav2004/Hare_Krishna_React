@@ -1,0 +1,39 @@
+*{
+ background-color: black;
+  color: rgb(255, 255, 255);
+}
+.mainDiv{
+  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20;
+  display: flex;
+  justify-content: center;
+}
+
+.Species{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.Heading{
+  display: flex;
+  justify-content: center;
+}
+
+
+.btns{
+  border:2px solid white;
+  border-radius: 4px;
+  height: 40px;
+  width: 60px;
+}
+.btns:hover{
+  background-color: gray;
+  border-color: black;
+}
+.list{
+  color: wheat;
+}
+
