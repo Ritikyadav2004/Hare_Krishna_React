@@ -19,10 +19,12 @@ function App() {
   const [preview, setPreview] = useState(false);
   
   function updateDetials(newDetails) {
-    setUser((prev)=>({
-      ...prev,
-      ...newDetails
-    }))
+   setUser((prev)=>({
+    ...prev,
+    ...newDetails
+
+   }))
+   
   }
 
   const [userState, setUserState] = useState('')
@@ -53,8 +55,9 @@ function App() {
 
 
       </div>
-      <h1>Enter Your Detials</h1>
+
       <div>
+        {((userState==="userDetails") || (userState==="userAddress")) &&   <h1>Enter Your Detials</h1>}
         {(userState === "userDetails") && <UserDetails detials={user} updateDetials={updateDetials} />}
         {(userState === "userAddress") && <UserAddress detials={user} updateDetials={updateDetials} />}
       </div>

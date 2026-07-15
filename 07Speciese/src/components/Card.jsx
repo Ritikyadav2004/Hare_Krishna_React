@@ -11,20 +11,16 @@ export const Card = ({name,type}) => {
     <div >
 
       <div style={{margin:"20px 0px 0px 0px"}}>
+        {
+          type.map(animal=>{
+            return(
+              <li>{animal}</li>
+            )
+           
+          })
+        }
 
-      {   
-        type.map((fruit,index)=>{
-         return (
-           <div key={index}
-> 
-          <ul className='list'>
-              <li> {fruit}</li>
-          </ul>
-
-          </div>
-         )
-        })
-      }
+      
     </div>
     </div>
     
