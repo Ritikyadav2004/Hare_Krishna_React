@@ -15,10 +15,8 @@ export const Card = ({name,type}) => {
       {   
         type.map((fruit,index)=>{
          return (
-           <div
-          key={index}
-          
-          > 
+           <div key={index}
+> 
           <ul className='list'>
               <li> {fruit}</li>
           </ul>
