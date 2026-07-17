@@ -8,6 +8,7 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import User from './Components/User/User';
 import Github, { githubInfoLoader } from './Components/Github/Github';
+import Login from './Components/Login/Login';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       loader={githubInfoLoader}
       path='github'
        element={<Github/>}/>
+       <Route path='login' element={<Login/>}/>
       
 
     </Route>
