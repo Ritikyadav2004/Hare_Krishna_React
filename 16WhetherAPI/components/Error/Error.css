@@ -1,0 +1,21 @@
+.error-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+
+  background: #fee2e2;
+  border: 1px solid #ef4444;
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.error-container h2 {
+  color: #b91c1c;
+  margin-bottom: 10px;
+}
+
+.error-container p {
+  color: #7f1d1d;
+}
