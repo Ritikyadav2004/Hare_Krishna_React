@@ -42,6 +42,9 @@ window.navigator.clipboard.writeText(password);
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 px-4 py-10 text-slate-100'>
+      <div className="header">
+        <h3 className='border 2 h-15 mb-6  stroke-olive-50 text-center'> <span className='text-center'>Suraksha</span></h3>
+              </div>
       <div className='mx-auto flex w-full max-w-xl flex-col rounded-2xl border border-white/10 bg-white/10 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl'>
         <div className='mb-6 text-center'>
           <p className='mb-2 text-sm uppercase tracking-[0.35em] text-cyan-300'>Secure Password</p>
@@ -51,7 +54,7 @@ window.navigator.clipboard.writeText(password);
         <div className='mb-5 flex overflow-hidden rounded-xl border border-slate-700 bg-slate-900/80 shadow-inner'>
           <input
             type="text"
-            value={password}
+            value={password}text-center
             className='w-full bg-transparent px-4 py-3 text-base text-slate-100 outline-none'
             placeholder='password'
             readOnly
