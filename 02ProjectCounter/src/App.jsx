@@ -6,25 +6,21 @@ function App() {
 // let count=9;
 let [count,setCount]=useState(0);
 
-
 const addvalue=()=>{
-  if(count>19)
-  {
-    setCount(count=0);
-  }
   setCount(count+1);
-console.log("Clicked",count);
 }
 
-
-const decreaseValue=()=>{
+const  decreaseValue=()=>{
   
-setCount(count-1);
-if(count=-1)
+  setCount(count-1)
+  if(count-1<0)
   {
-   setCount(count=0);
+    setCount(count=0)
   }
 }
+
+
+
   return (
     <div id='mainContent'>
       <h1>Ritik Aur Code</h1>

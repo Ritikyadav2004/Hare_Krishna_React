@@ -35,8 +35,8 @@ function App()
             <div>
              <button  className="btns" onClick={()=>handleSpecies("ALL")}>ALL</button>
             {species==="ALL" && <Card name="Bird" type={bird}/>}
-           { species==="ALL" && <Card name ="reptiles" type={reptiles}/>}
-           { species==="ALL" && <Card  name="mamles" type={mamles}/>}
+            { species==="ALL" && <Card name ="reptiles" type={reptiles}/>}
+            { species==="ALL" && <Card  name="mamles" type={mamles}/>}
 
            </div>
          
