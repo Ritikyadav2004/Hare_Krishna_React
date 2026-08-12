@@ -2,7 +2,9 @@ import React from 'react'
 
 const Summery = () => {
   return (
-    <div>Summery</div>
+    <div>
+              <h1>Summery</h1>
+    </div>
   )
 }
 
