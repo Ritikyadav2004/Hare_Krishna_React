@@ -7,12 +7,12 @@ export const initialState={
 export function cartReducer(state,action){
     switch(action.type)
     {
-        case 'ADD_TO_CARTT':{
+        case 'ADD_TO_CART':{
             const productToAdd=action.payload;
 
             // checking item pahale se cart me hai ya nahi
             const existingItem=state.items.find((item)=>{
-                return item.id===productToAdd.id;4
+                return item.id===productToAdd.id;
 
             })
 
@@ -61,8 +61,8 @@ export function cartReducer(state,action){
         }
 
 
-    case 'UPDATE_ITEM_QUANTITY':{
-        const productId=action.payload.productId;
+    case 'UPDATE_QUANTITY':{
+        const productId=action.payload.id;
         const delta=action.payload.delta
 
 
@@ -99,9 +99,9 @@ export function cartReducer(state,action){
  if(code==='SAVE10')
  {
     return {
-        items:state.item,
-        discount:state.discount,
-        promoCode:state.promoCode
+        items:state.items,
+        discount:10,
+        promoCode:code
     };
  }
 

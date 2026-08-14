@@ -23,7 +23,7 @@ const ProductList = ({dispatch}) => {
 
                     return(
                     <div 
-                    key={id}  key={id} // React ko har item pehchanne ke liye unique 'key' chahiye hoti hai
+                    key={id} // React ko har item pehchanne ke liye unique 'key' chahiye hoti hai
                      style={{border:'1px solid black',padding:'10px',width:'200px'}}>
                    {/* Product ka naam aur price dikha rahe hain */}
 
