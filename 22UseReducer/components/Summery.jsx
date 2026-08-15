@@ -22,7 +22,7 @@ const Summery = ({ items, discount, promoCode, dispatch }) => {
   // Step D: Final Total Calculation
   // Math.max(0, ...) isliye lagaya hai taaki agar discount subtotal se bada ho jaye, 
   // toh total kabhi negative (-ve) na dikhe (kam se kam $0 rahe).
-  const total = Math.max(0, subtotal - discount);
+  const total = Math.max(0, subtotal - (subtotal * discount)/100);
 
 
   // Step E: Promo Code Submit Handler Function

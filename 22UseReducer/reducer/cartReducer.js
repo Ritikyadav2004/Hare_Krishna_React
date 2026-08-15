@@ -4,6 +4,7 @@ export const initialState={
     promoCode:'' , // Starting me koi promo code apply nahi hoga
 }
 
+// accountant immutateblity 
 export function cartReducer(state,action){
     switch(action.type)
     {
