@@ -15,10 +15,10 @@ const Home = () => {
           value—all in one friendly place.
         </p>
         <div className="hero-actions">
-          <button onClick={()=>navigate('/products')} className="primary-ui-button">
+          <button type="button" onClick={()=>navigate('/products')} className="primary-ui-button">
             Shop the collection <span>→</span>
           </button>
-          <button onClick={()=>navigate('/categories')} className="text-ui-button">Explore categories</button>
+          <button type="button" onClick={()=>navigate('/categories')} className="text-ui-button">Explore categories</button>
         </div>
         <div className="trust-row">
           <span>
@@ -55,7 +55,7 @@ const Home = () => {
           <span className="eyebrow">SHOP BY CATEGORY</span>
           <h2>Something for every day.</h2>
         </div>
-       <button onClick={()=>navigate('/categories')}> <span className="view-all">View all categories →</span></button>
+       <button type="button" onClick={()=>navigate('/categories')} className="view-all">View all categories →</button>
       </div>
       <div className="category-grid">
         <article className="category-card lavender">
