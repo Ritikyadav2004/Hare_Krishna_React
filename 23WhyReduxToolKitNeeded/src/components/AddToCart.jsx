@@ -1,5 +1,10 @@
+import { useDispatch  , useSelector} from "react-redux";
+import { addItem, removeItem , clearAllItem } from "../redux/slice.js";
 function AddToCart() {
-  
+      
+  const dispatch = useDispatch();
+
+   const selector=useSelector((state)=>state.cart.value)
 
   return (
     <div
@@ -83,13 +88,15 @@ function AddToCart() {
             gap: "12px",
           }}
         >
-          <button
+          <button 
+          onClick={() => { dispatch(removeItem()) }}
             style={{
               width: "30px",
               height: "30px",
               border: "1px solid #ddd",
               backgroundColor: "white",
               borderRadius: "5px",
+              cursor: "pointer",
             }}
           >
             -
@@ -100,16 +107,18 @@ function AddToCart() {
               fontWeight: "bold",
             }}
           >
-            1
+            {selector}
           </span>
 
-          <button
+          <button 
+          onClick={()=>{dispatch(addItem(1))}}
             style={{
               width: "30px",
               height: "30px",
               border: "1px solid #ddd",
               backgroundColor: "white",
               borderRadius: "5px",
+              cursor: "pointer",
             }}
           >
             +
@@ -126,7 +135,9 @@ function AddToCart() {
         </h3>
 
         {/* Remove */}
-        <button
+        <button 
+           
+           onClick={() => { dispatch(clearAllItem()) }}
           style={{
             color: "#ef4444",
             border: "none",
@@ -134,7 +145,7 @@ function AddToCart() {
             cursor: "pointer",
           }}
         >
-          Remove
+          Clear Cart
         </button>
       </div>
     </div>

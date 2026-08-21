@@ -1,8 +1,12 @@
 import React from 'react'
 // import AddToCart from './AddToCart.jsx'
+import { Link, useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 function Header() {
   const selector=useSelector((state)=>state.cart.value)
+
+  const navigate =useNavigate();
+  
   const linkStyle = {
     textDecoration: "none",
     color: "#444",
@@ -86,45 +90,45 @@ function Header() {
           alignItems: "center",
         }}
       >
-        <a
-          href="#"
+        <Link
+          to="/"
           style={linkStyle}
           onMouseEnter={(e) => handleLinkHover(e, true)}
           onMouseLeave={(e) => handleLinkHover(e, false)}
         >
           🏠 Home
-        </a>
+        </Link>
 
-        <a
-          href="#"
+        <Link
+          to="/products"
           style={linkStyle}
           onMouseEnter={(e) => handleLinkHover(e, true)}
           onMouseLeave={(e) => handleLinkHover(e, false)}
         >
           📦 Products
-        </a>
+        </Link>
 
-        <a
-          href="#"
+        <Link
+          to="/about"
           style={linkStyle}
           onMouseEnter={(e) => handleLinkHover(e, true)}
           onMouseLeave={(e) => handleLinkHover(e, false)}
         >
           ℹ️ About
-        </a>
+        </Link>
 
-        <a
-          href="#"
+        <Link
+          to="/contact"
           style={linkStyle}
           onMouseEnter={(e) => handleLinkHover(e, true)}
           onMouseLeave={(e) => handleLinkHover(e, false)}
         >
           📧 Contact
-        </a>
+        </Link>
       </nav>
 
       {/* Cart Button */}
-      <button onClick={()=>setButton(!button)}
+      <button onClick={()=>navigate('/cart')}
 
         style={{
           backgroundColor: "#2563eb",
