@@ -4,7 +4,9 @@ function AddToCart() {
       
   const dispatch = useDispatch();
 
-   const selector=useSelector((state)=>state.cart.value)
+  const quantity = useSelector((state) => state.cart.value);
+  const itemPrice = 1999;
+  const totalAmount = quantity * itemPrice;
 
   return (
     <div
@@ -107,7 +109,7 @@ function AddToCart() {
               fontWeight: "bold",
             }}
           >
-            {selector}
+            {quantity}
           </span>
 
           <button 
@@ -131,7 +133,7 @@ function AddToCart() {
             fontSize: "18px",
           }}
         >
-          ₹1,999
+          ₹{itemPrice.toLocaleString("en-IN")}
         </h3>
 
         {/* Remove */}
@@ -148,6 +150,8 @@ function AddToCart() {
           Clear Cart
         </button>
       </div>
+
+      <h2>Total Amount: ₹{totalAmount.toLocaleString("en-IN")}</h2>
     </div>
   );
 }
