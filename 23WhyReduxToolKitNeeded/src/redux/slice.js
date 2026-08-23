@@ -12,7 +12,9 @@ const addToCartSlice=createSlice({
             state.value+=1
         },
         removeItem:(state)=>{
-            state.value>0? state.value-=1:null
+            if (state.value > 0) {
+                state.value -= 1
+            }
         },
         clearAllItem:(state)=>{
             state.value=0
