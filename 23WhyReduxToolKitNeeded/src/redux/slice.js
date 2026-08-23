@@ -1,15 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const intialState={
-    value:0
+    // value:0 // this refer to Count at the cart
+    items:[] // now we will see the details of produt in the cart which is already added
 }
 
 const addToCartSlice=createSlice({
     name:'cart',
     initialState:intialState,
     reducers:{
-        addItem:(state)=>{
-            state.value+=1
+        addItem:(state,action)=>{
+            // state.value+=1
+            // console.log(action);
+            state.items.push(action.payload)
         },
         removeItem:(state)=>{
             if (state.value > 0) {
