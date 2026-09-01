@@ -2,17 +2,13 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
-  async (_, { rejectWithValue }) => {
-    try {
-      const response = await fetch("https://dummyjson.com/products");
-      if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
-      const data = await response.json();
-      return data.products;
-    } catch (error) {
-      return rejectWithValue(error.message || "Something went wrong");
-    }
+  async () => {
+    const res = await fetch('/products.json');
+    const data = await res.json();
+    return data.products;
   }
 );
+
 
 const initialState = { products: [], status: "idle", error: null };
 

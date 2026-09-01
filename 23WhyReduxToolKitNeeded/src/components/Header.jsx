@@ -3,7 +3,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 function Header() {
-  const Cartselector=useSelector((state)=>state.cart.items)
+  const cartItems=useSelector((state)=>state.cart.items)
 
   const navigate =useNavigate();
   
@@ -170,7 +170,7 @@ function Header() {
             fontWeight: "bold",
           }}
         >
-          {Cartselector.length?Cartselector.length:0}
+          {cartItems.length?cartItems.length:0}
         </span>
         {/* {button && <AddToCart/>} */}
       </button>

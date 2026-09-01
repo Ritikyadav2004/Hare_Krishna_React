@@ -1,26 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const intialState={
+const initialState={
     // value:0 // this refer to Count at the cart
-    items:[] // now we will see the details of produt in the cart which is already added
+    // items:[] // now we will see the details of produt in the cart which is already added
+    items:localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[]
 }
 
 const addToCartSlice=createSlice({
     name:'cart',
-    initialState:intialState,
+    initialState:initialState,
     reducers:{
         addItem:(state,action)=>{
-            // state.value+=1
-            // console.log(action);
             state.items.push(action.payload)
+            localStorage.setItem('cart',JSON.stringify(state.items))
         },
-        removeItem:(state)=>{
-            if (state.value > 0) {
-                state.value -= 1
-            }
+        removeItem:(state,action)=>{
+           const cartData=state.items.filter(item=>item.id!==action.payload.id);
+           state.items=cartData;
+           localStorage.setItem('cart',JSON.stringify(cartData))
         },
         clearAllItem:(state)=>{
-            state.value=0
+            state.items=[];
+            localStorage.setItem('cart', JSON.stringify([]));
         }
 }})
 

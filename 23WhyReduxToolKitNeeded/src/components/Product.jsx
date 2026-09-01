@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addItem } from "../redux/slice";
+import { addItem ,removeItem} from "../redux/slice";
 import { fetchProducts } from "../redux/productSlice";
 
 function Product() {
   const dispatch = useDispatch();
   const { products, status, error } = useSelector((state) => state.products);
-  const cartSelector = useSelector((state) => state.cart.items);
-  // console.log(cartSelector.length)
+  const cartItems = useSelector((state) => state.cart.items);
+  // console.log(cartItems.length)
 
   useEffect(() => {
     // StrictMode/development re-render ke baad unnecessary request se bachata hai.
@@ -80,14 +80,18 @@ function Product() {
                 </div>
                 <div className="product-footer">
                   <strong>${product.price}</strong>
+
+                  {/* REMOVE BUTTON */}
                  {
-                  cartSelector.find(cartItem=>cartItem.id===product.id)?
+                  cartItems.find(cartItem=>cartItem.id===product.id)?
                    <button
+
+                   onClick={()=>dispatch(removeItem(product))}
                     className="btn-disable"
                    
                    
                   >
-                    Added in cart
+                    Remove 
                   </button>: <button
                     className="add-cart-button"
                     onClick={() => dispatch(addItem(product))}
